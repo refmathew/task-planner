@@ -1,5 +1,8 @@
-export default {
+import { defineNuxtConfig } from "@nuxt/bridge";
+
+export default defineNuxtConfig({
   ssr: false,
+  bridge: false,
   /*
    ** Headers of the page
    */
@@ -49,6 +52,8 @@ export default {
     "@nuxtjs/eslint-module",
 
     "@nuxt/postcss8",
+    "@nuxtjs/composition-api/module",
+    "@pinia/nuxt",
   ],
   /*
    ** Nuxt.js modules
@@ -118,4 +123,4 @@ export default {
     apiUrl: process.env.API_URL,
     version: process.env.VERSION,
   },
-};
+});
