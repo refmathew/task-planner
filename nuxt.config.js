@@ -47,6 +47,8 @@ export default {
 
     // https://github.com/nuxt-community/eslint-module
     "@nuxtjs/eslint-module",
+
+    "@nuxt/postcss8",
   ],
   /*
    ** Nuxt.js modules
@@ -81,6 +83,12 @@ export default {
           plugins: ["@babel/plugin-proposal-optional-chaining"],
         },
       });
+    },
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
     },
   },
 

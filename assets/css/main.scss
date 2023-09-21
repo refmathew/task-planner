@@ -1,5 +1,9 @@
 @use "globals";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // SCSS Variables
 @import "variables";
 // Bootstrap
