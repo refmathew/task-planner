@@ -123,4 +123,8 @@ export default defineNuxtConfig({
     apiUrl: process.env.API_URL,
     version: process.env.VERSION,
   },
+
+  env: {
+    API_URL: "https://63906a8d65ff41831112cdd1.mockapi.io/api/v1",
+  },
 });

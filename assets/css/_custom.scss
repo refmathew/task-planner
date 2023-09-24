@@ -1,1 +1,36 @@
 // Write your custom styling here
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.text-lg {
+  font-size: 3.2rem !important;
+  line-height: normal !important;
+}
+
+.text-md {
+  font-size: 2rem !important;
+  line-height: normal !important;
+}
+
+.text-sm {
+  font-size: 1.4rem !important;
+  line-height: normal !important;
+}
+
+.text-xs {
+  font-size: 1.2rem !important;
+  line-height: normal !important;
+}
+
+.border-red {
+  border-color: #ff5e57 !important;
+}
+
+.bg-red {
+  background-color: #ff5e57 !important;
+}
