@@ -1,6 +1,7 @@
 // Background Gradient Utilities
+@use "variables" as var;
 
-@each $color, $value in $theme-colors {
+@each $color, $value in var.$theme-colors {
   .bg-gradient-#{$color} {
     background-color: $value;
     background-image: linear-gradient(

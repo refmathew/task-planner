@@ -1,4 +1,6 @@
-@each $color, $value in $theme-colors {
+@use "variables" as var;
+
+@each $color, $value in var.$theme-colors {
   .text-#{$color} {
     color: $value !important;
   }
@@ -80,5 +82,5 @@ h6,
 }
 
 .font-weight-medium {
-  font-weight: $headings-font-weight;
+  // font-weight: $headings-font-weight;
 }
