@@ -18,7 +18,7 @@ const handleButtonClick = () => {
 
 <template>
   <button
-    class="task-filter px-[1.6rem] py-[.4rem] rounded-[.4rem] text-sm text-gray-500 transition-colors"
+    class="task-filter px-[1.6rem] py-[.4rem] rounded-[.4rem] text-md text-gray-500 transition-colors"
     :class="{ 'bg-gray-200': taskStore.activeTask === filterName }"
     @click="handleButtonClick"
   >

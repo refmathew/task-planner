@@ -21,7 +21,7 @@ const handleSearchInput = useDebounceFn(() => {
       icon="fa-solid fa-search"
     />
     <input
-      class="flex-1 text-sm font-medium text-gray-700 outline-none search__input placeholder:text-gray-400"
+      class="flex-1 text-md font-medium text-gray-700 outline-none search__input placeholder:text-gray-400"
       type="text"
       placeholder="Search"
       v-model="searchInputValue"

@@ -45,7 +45,7 @@ const placeholder = computed(() => {
       </Transition>
 
       <form
-        class="task-input__input flex-1 text-sm h-full ml-[2.8rem]"
+        class="task-input__input flex-1 text-md h-full ml-[2.8rem]"
         @submit.prevent="handleInputSubmit"
       >
         <input
