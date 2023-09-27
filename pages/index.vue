@@ -14,7 +14,7 @@
         Get things done with your day, a list that refreshes everyday
       </h2>
       <NuxtLink
-        class="home__tasks-link rounded-[.4rem] mt-[.8rem] px-[1.6rem] py-[.8rem] bg-primary text-sm font-normal text-white !no-underline"
+        class="home__tasks-link rounded-[.4rem] mt-[.8rem] px-[1.6rem] py-[.8rem] bg-primary text-md font-normal text-white !no-underline"
         to="/tasks"
       >
         View tasks
