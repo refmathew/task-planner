@@ -77,7 +77,7 @@ const shouldShowDropdown = ref(false);
         @click="handleCheckClick"
       >
         <font-awesome-icon
-          class="task-item__check-icon w-[.875rem] h-[1rem]"
+          class="task-item__check-icon w-[.875rem] h-[1rem] text-white"
           icon="fa-solid fa-check"
         />
       </button>
@@ -112,23 +112,26 @@ const shouldShowDropdown = ref(false);
           v-if="task.assignee.name"
         />
         <font-awesome-icon
-          class="task-item__assignee-avatar w-[1.6rem] h-[1.6rem]"
+          class="task-item__assignee-avatar w-[1.6rem] h-[1.6rem] text-gray-300 transition-colors hover:!text-gray-500"
           icon="fa-solid fa-user-xmark"
           v-else
         />
       </button>
-      <button
-        class="task-item__important grid"
-        :class="[{ 'task-item__important--active': task.is_important }]"
-        @click="handleImportantClick"
-      >
-        <font-awesome-icon icon="fa-solid fa-star" />
+      <button class="task-item__important grid" @click="handleImportantClick">
+        <font-awesome-icon
+          class="text-gray-300 transition-colors hover:!text-yellow"
+          :class="[{ 'text-yellow': task.is_important }]"
+          icon="fa-solid fa-star"
+        />
       </button>
       <button
         class="task-item__delete grid"
         @click="shouldShowDeleteModal = true"
       >
-        <font-awesome-icon icon="fa-solid fa-trash-can" />
+        <font-awesome-icon
+          class="text-gray-300 transition-colors hover:!text-danger"
+          icon="fa-solid fa-trash-can"
+        />
       </button>
     </div>
     <DeleteModal
@@ -145,40 +148,4 @@ const shouldShowDropdown = ref(false);
   </div>
 </template>
 
-<style lang="scss">
-@import "@/assets/css/variables";
-
-.task-item {
-  &__check svg path {
-    fill: $white;
-  }
-
-  &__assignee svg path {
-    transition: fill 150ms ease-in-out;
-    fill: $gray-300;
-  }
-
-  &__assignee:hover svg path {
-    fill: $gray-500;
-  }
-
-  &__important svg path {
-    transition: fill 150ms ease-in-out;
-    fill: $gray-300;
-  }
-
-  &__important--active svg path,
-  &__important:hover svg path {
-    fill: $yellow;
-  }
-
-  &__delete svg path {
-    transition: fill 150ms ease-in-out;
-    fill: $gray-300;
-  }
-
-  &__delete:hover svg path {
-    fill: $danger;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

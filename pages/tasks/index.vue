@@ -23,7 +23,7 @@ const handleSearchInput = (input) => {
       class="tasks__heading flex justify-between items-center w-full max-w-[144rem]"
     >
       <NuxtLink
-        class="tasks__home-link font-medium text-lg !text-secondary !decoration-0"
+        class="tasks__home-link font-medium text-2xl !text-secondary !no-underline"
         to="/"
         >Task Planner</NuxtLink
       >
