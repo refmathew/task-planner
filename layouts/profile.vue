@@ -73,9 +73,8 @@ const sidebarWidthPercent = 0.2;
 const baseFontSize = 10;
 const mainGap = 24;
 const sidebarWidth = computed(() => {
-  return `${
-    (profileLayoutMainWidth.value / baseFontSize) * sidebarWidthPercent
-  }rem`;
+  return `${(profileLayoutMainWidth.value / baseFontSize) * sidebarWidthPercent
+    }rem`;
 });
 const pageWidth = computed(() => {
   return `calc(80% - ${mainGap}px)`;
@@ -83,27 +82,20 @@ const pageWidth = computed(() => {
 </script>
 
 <template>
-  <div
-    class="flex flex-col items-center w-full min-h-screen gap-24 text-sm profile-layout bg-gray-50"
-  >
+  <div class="flex flex-col items-center w-full min-h-screen gap-24 text-sm profile-layout bg-gray-50">
     <!-- Nav -->
     <ProfileNav class="sticky z-50 top-0" :user="user" />
 
     <!-- Main -->
-    <div
-      class="profile-layout__main relative w-[88%] max-w-[144rem] pb-24"
-      ref="$profileLayoutMain"
-    >
+    <div class="profile-layout__main relative w-[88%] max-w-[144rem] pb-24" ref="$profileLayoutMain">
       <!-- Sidebar -->
-      <ProfileSidebar
-        class="fixed top-[9.6rem]"
-        :style="{ width: sidebarWidth }"
-        :notifications="user.notifications.length"
-      />
+      <ProfileSidebar class="fixed top-[9.6rem] bottom-[6.4rem]" :style="{ width: sidebarWidth }"
+        :notifications="user.notifications.length" />
       <!-- Main page -->
       <NuxtChild :style="{ width: pageWidth }" :user="user" />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
