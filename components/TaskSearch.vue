@@ -14,19 +14,10 @@ const handleSearchInput = useDebounceFn(() => {
 
 <template>
   <div
-    class="task-search flex gap-[.8rem] w-full max-w-[144rem] p-[1.6rem] py-[.8rem] !border border-solid border-gray-4000 rounded-full"
-  >
-    <font-awesome-icon
-      class="task-search__icon w-[1.4rem] h-[1.4rem]"
-      icon="fa-solid fa-search"
-    />
-    <input
-      class="flex-1 text-md font-medium text-gray-700 outline-none search__input placeholder:text-gray-400"
-      type="text"
-      placeholder="Search"
-      v-model="searchInputValue"
-      @input="handleSearchInput"
-    />
+    class="task-search flex items-center gap-[.8rem] w-full max-w-[144rem] p-[1.6rem] py-[.8rem] !border border-solid border-gray-4000 rounded-full">
+    <font-awesome-icon class="task-search__icon w-[1.4rem] h-[1.4rem]" icon="fa-solid fa-search" />
+    <input class="flex-1 text-md font-medium text-gray-700 outline-none search__input placeholder:text-gray-400"
+      type="text" placeholder="Search" v-model="searchInputValue" @input="handleSearchInput" />
   </div>
 </template>
 
